@@ -9,7 +9,7 @@ launcher: wofi
 notification: dunst
 terminal: foot
 
-####Inspiration/sources by:
+###Inspiration/sources by:
 theme: https://github.com/m-gail/dotfiles
 waybar: https://github.com/1amSimp1e/dots/tree/balcony%F0%9F%9A%8A
 power-menu: https://github.com/quangdinh/swaywm-scripts
