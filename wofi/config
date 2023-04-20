@@ -1,0 +1,15 @@
+mode=drun
+prompt=Search...
+width=30%
+#content_halign=end
+colors=colors
+filter_rate=1
+dmenu-parse_action=true
+allow_images=true
+line_wrap=word_char
+insensitive=true
+term=foot
+lines=6
+layer=top
+hide_scroll=true
+normal_window=true

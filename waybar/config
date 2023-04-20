@@ -1,0 +1,89 @@
+{
+    "height": 40, // Waybar height (to be removed for auto height)
+    "layer": "bottom", // Waybar at top layer
+    "modules-left": ["sway/workspaces", "sway/mode", "network", "pulseaudio", "backlight", "battery", "custom/weather"],
+    "modules-center":["sway/window"],
+    "modules-right": ["idle_inhibitor", "clock", "custom/power-menu"],
+    "sway/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": true,
+      "format": "{name}",
+    },
+    "sway/window": {
+        "format": "{}",
+	"max-length": 60,
+    },
+    "sway/mode": {
+	"format": "{}"
+    },
+    "clock": {
+        "format": "{:%H:%M - %d.%m}",
+	"tooltip-format": "{:%a %d %b %Y}",
+    },
+
+    "backlight": {
+        "format": "{icon}",
+	"format-alt": "{percent}%",
+	"tooltip-format": "{percent}",
+        "format-icons": ["󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "],
+    },
+    "network": {
+        /* "format-wifi": "直", */
+        "format-wifi": "{icon}",
+        "format-ethernet": "",
+        "format-disconnected": "睊",
+	"format-alt": "{signalStrength}%",
+        "tooltip-format": "{ipaddr} {essid} ({signalStrength}%)",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+	"format-bluetooth": "{icon} ",
+        "format-muted": "婢",
+	"format-alt": "{volume}%",
+	"tooltip-format": "{volume}%",
+        "format-icons": {
+            "default": ["", "", "墳"]
+        },
+    },
+
+    "battery": {
+      "bat": "BAT0",
+      "interval": 60,
+      "states": {
+          "warning": 40,
+          "critical": 15
+      },
+      "max-length": 20,
+      "format": "{icon} ",
+      "format-warning": "{icon}",
+      "format-critical": "{icon}",
+      "format-charging": "<span font-family='Font Awesome 6 Free'></span>",
+      "format-plugged": "ﮣ", 
+      "tooltip-format": "{capacity}% {time}",
+      "format-full": "ﮣ", 
+      "format-alt": "{capacity}%",
+      "format-time": "{H}:{m}",
+      "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣"]
+    },
+    "custom/weather": {
+      "exec": "python3 ~/.config/waybar/scripts/weather.py",
+      "restart-interval": 300,
+      "return-type": "json",
+    },   
+   "idle_inhibitor": {
+       "format" : "{icon}",
+	"start-activated": true,
+	"tooltip-format-activated": "No suspension",
+	"tooltip-format-deactivated": "Auto-suspension",
+	"format-icons": {
+		"deactivated": "",
+		"activated": ""
+	}	
+    },
+    "custom/power-menu": {
+        "format": " ⏻ ",
+        "on-click": "python3 ~/.config/waybar/scripts/wofipowermenu.py",
+    }, 
+}
