@@ -1,5 +1,5 @@
 # jubilant-dollop
-Arch+sway configuration dot files
+Arch+Hyprland (and sway) configuration dot files
 
 ### Configuration:
 OS: Arch
