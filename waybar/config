@@ -1,17 +1,29 @@
 {
     "height": 40, // Waybar height (to be removed for auto height)
-    "layer": "bottom", // Waybar at top layer
-    "modules-left": ["sway/workspaces", "sway/mode", "network", "pulseaudio", "backlight", "battery", "custom/weather"],
-    "modules-center":["sway/window"],
+    "layer": "top", // Waybar at top layer
+    "modules-left": ["wlr/workspaces", "sway/workspaces#sway", "sway/mode", "network", "pulseaudio", "backlight", "battery", "custom/weather"],
+    "modules-center":["sway/window", "hyprland/window"],
     "modules-right": ["idle_inhibitor", "clock", "custom/power-menu"],
-    "sway/workspaces": {
+    "wlr/workspaces": {
+      "disable-scroll": true,
+      "sort-by-number": true,
+      "all-outputs": true,
+      "format": "{name}",
+      "on-click": "activate",
+    },
+    "sway/workspaces#sway": {
       "disable-scroll": true,
       "all-outputs": true,
       "format": "{name}",
+      "on-click": "activate",
+    },
+    "hyprland/window": {
+        "format": "{}",
+	    "max-length": 60,
     },
     "sway/window": {
         "format": "{}",
-	"max-length": 60,
+	    "max-length": 60,
     },
     "sway/mode": {
 	"format": "{}"
@@ -69,7 +81,7 @@
     },
     "custom/weather": {
       "exec": "python3 ~/.config/waybar/scripts/weather.py",
-      "restart-interval": 300,
+      "restart-interval": 1,
       "return-type": "json",
     },   
    "idle_inhibitor": {
@@ -84,6 +96,6 @@
     },
     "custom/power-menu": {
         "format": " ⏻ ",
-        "on-click": "python3 ~/.config/waybar/scripts/wofipowermenu.py",
+        "on-click": "wlogout --protocol layer-shell",
     }, 
 }
