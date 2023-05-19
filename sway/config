@@ -72,9 +72,15 @@ set $touchpad "1267:12631:ASUE1409:00_04F3:3157_Touchpad"
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    # Launch programs
+    bindsym $mod+e exec thunar
+    bindsym $mod+Shift+x exec xkill
+    bindsym $mod+b exec brave
+    bindsym $mod+v exec cliphist list | wofi --show dmenu -H 300 -W 500   | cliphist decode | wl-copy
+    bindsym $mod+Shift+v exec rm "$HOME/.cache/cliphist/db"
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec pkill $menu || $menu
@@ -91,7 +97,9 @@ set $touchpad "1267:12631:ASUE1409:00_04F3:3157_Touchpad"
 
     # Exit sway (logs you out of your Wayland session)
     #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-    bindsym $mod+Shift+e exec "python3 ~/.config/waybar/scripts/wofipowermenu.py"
+    bindsym $mod+Shift+q exec 'swaymsg exit'
+    bindsym $mod+F9 exec swaylock
+    bindsym $mod+Escape exec killall wlogout || wlogout --protocol layer-shell
 
 #
 #Special Keys:
@@ -105,11 +113,11 @@ set $touchpad "1267:12631:ASUE1409:00_04F3:3157_Touchpad"
     # bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     # bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
-    bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/dunst/scripts/volume_brightness.sh volume_up
-    bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/dunst/scripts/volume_brightness.sh volume_down
-    bindsym XF86AudioMute exec --no-startup-id ~/.config/dunst/scripts/volume_brightness.sh volume_mute
-    bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/dunst/scripts/volume_brightness.sh brightness_up
-    bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/dunst/scripts/volume_brightness.sh brightness_down
+    bindsym XF86AudioRaiseVolume exec ~/.config/dunst/scripts/volume_brightness.sh volume_up --no-startup-id
+    bindsym XF86AudioLowerVolume exec ~/.config/dunst/scripts/volume_brightness.sh volume_down --no-startup-id
+    bindsym XF86AudioMute exec ~/.config/dunst/scripts/volume_brightness.sh volume_mute --no-startup-id
+    bindsym XF86MonBrightnessUp exec ~/.config/dunst/scripts/volume_brightness.sh brightness_up --no-startup-id
+    bindsym XF86MonBrightnessDown exec ~/.config/dunst/scripts/volume_brightness.sh brightness_down --no-startup-id
 
 #
 # Toggle touchpad
@@ -178,13 +186,13 @@ set $touchpad "1267:12631:ASUE1409:00_04F3:3157_Touchpad"
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    #bindsym $mod+b splith
+    #bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
+    bindsym $mod+x layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+s layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -196,7 +204,7 @@ set $touchpad "1267:12631:ASUE1409:00_04F3:3157_Touchpad"
     bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    bindsym $mod+g focus parent
 #
 # Scratchpad:
 #
@@ -204,11 +212,11 @@ set $touchpad "1267:12631:ASUE1409:00_04F3:3157_Touchpad"
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    bindsym $mod+Shift+a move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    bindsym $mod+a scratchpad show
 #
 # Resizing containers:
 #
@@ -243,7 +251,7 @@ bindsym $mod+Shift+n exec "dunstctl close-all"
 #
 # Windows customization:
 
-gaps inner 10
+gaps inner 7
 smart_gaps true
 smart_borders true
 default_border pixel 3
@@ -263,7 +271,7 @@ bar swaybar_command waybar
 # Cursor theme
 #
 
-seat seat0 xcursor_theme "breeze_cursors"
+seat seat0 xcursor_theme "Breeze"
 
 
 #
@@ -280,11 +288,13 @@ bindsym Insert exec 'killall -s SIGINT wf-recorder'
 #
 # Positioning of specific windows
 #
-for_window [app_id="wofi"] floating enable, move position center, move up 150px
+#for_window [app_id="wofi"] floating enable, move position center, move up 150px
 
 
 exec autotiling &
 exec wlsunset -l 48.2 -L 16.4 -T 5500 &
-exec --no-startup-id dunst
+exec dunst --no-startup-id &
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec wl-paste --watch cliphist store
 
 include /etc/sway/config.d/*
