@@ -8,15 +8,23 @@ Arch+Hyprland (and sway) configuration dot files
 
 
 ### Configuration:
-- OS: Arch Linux
-- WM: Hyprland
-- statusbar: waybar
-- launcher: wofi
-- notification: dunst
-- terminal: foot
-- powermenu: wlogout
+- OS: [Arch Linux](https://github.com/archlinux)
+- WM: [Hyprland](https://github.com/hyprwm/Hyprland)
+- statusbar: [waybar](https://github.com/Alexays/Waybar)
+- launcher: [wofi](https://gitlab.com/dgirault/wofi)
+- notification: [dunst](https://github.com/dunst-project/dunst)
+- powermenu: [wlogout](https://github.com/ArtsyMacaw/wlogout)
+
+- terminal: [foot](https://github.com/r-c-f/foot)
+- file explorer: [thunar](https://gitlab.xfce.org/xfce/thunar) + [ranger](https://github.com/ranger/ranger)
+- text editor: [xed](https://github.com/linuxmint/xed) + [vim](https://github.com/vim/vim)
+- image viewer: [vimiv](https://github.com/karlch/vimiv)
+- pdf viewer: [zathura](https://github.com/pwmt/zathura)+poppler
+- media player: [mpv](https://github.com/mpv-player/mpv)
+- calculator: [qalc](https://github.com/Qalculate/libqalculate)
+- youtube-cli: [yewtube](https://github.com/mps-youtube/yewtube)
 
 Inspiration/sources by:
-- theme: https://github.com/m-gail/dotfiles
-- waybar: https://github.com/1amSimp1e/dots/tree/balcony%F0%9F%9A%8A
-- wallpaper: https://github.com/elementary/wallpapers
+- theme: [m-gail](https://github.com/m-gail/dotfiles)
+- waybar: [1am1Simp1e](https://github.com/1amSimp1e/dots/tree/balcony%F0%9F%9A%8A)
+- wallpaper: [elementaryOS](https://github.com/elementary/wallpapers)
