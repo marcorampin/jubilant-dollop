@@ -1,8 +1,8 @@
 {
     "height": 40, // Waybar height (to be removed for auto height)
     "layer": "top", // Waybar at top layer
-    "modules-left": ["wlr/workspaces", "sway/workspaces#sway", "sway/mode", "network", "pulseaudio", "backlight", "battery", "custom/weather"],
-    "modules-center":["sway/window", "hyprland/window"],
+    "modules-left": ["wlr/workspaces", "sway/workspaces#sway", "hyprland/submap", "sway/mode", "network", "pulseaudio", "backlight", "battery", "custom/weather"],
+    "modules-center":["hyprland/window", "sway/window"],
     "modules-right": ["idle_inhibitor", "clock", "custom/power-menu"],
     "wlr/workspaces": {
       "disable-scroll": true,
@@ -24,6 +24,9 @@
     "sway/window": {
         "format": "{}",
 	    "max-length": 60,
+    },
+    "hyprland/submap": {
+	"format": "{}"
     },
     "sway/mode": {
 	"format": "{}"
