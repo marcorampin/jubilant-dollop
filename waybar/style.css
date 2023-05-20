@@ -21,6 +21,7 @@ window#waybar.hidden {
 
 #clock,
 #mode,
+#submap,
 #workspaces,
 #idle_inhibitor,
 #custom-power-menu,
@@ -83,6 +84,9 @@ window#waybar.hidden {
 }
 
 #mode {
+  margin-left: 0px;
+}
+#submap {
   margin-left: 0px;
 }
 
