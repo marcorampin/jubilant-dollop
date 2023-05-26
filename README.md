@@ -16,7 +16,7 @@ Arch+Hyprland (and sway) configuration dot files
 - powermenu: [wlogout](https://github.com/ArtsyMacaw/wlogout)
 
 - terminal: [foot](https://github.com/r-c-f/foot)
-- file explorer: [thunar](https://gitlab.xfce.org/xfce/thunar) + [ranger](https://github.com/ranger/ranger)
+- file explorer: [PCManFM](https://github.com/lxde/pcmanfm) + [lf](https://github.com/gokcehan/lf)
 - text editor: [xed](https://github.com/linuxmint/xed) + [vim](https://github.com/vim/vim)
 - image viewer: [vimiv](https://github.com/karlch/vimiv)
 - pdf viewer: [zathura](https://github.com/pwmt/zathura)+poppler
