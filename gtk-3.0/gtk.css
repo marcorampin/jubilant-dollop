@@ -30,7 +30,7 @@ base background color of selections */
 @define-color theme_selected_bg_color_breeze #4ccf9f;
 /*
 text/foreground color of selections */
-@define-color theme_selected_fg_color_breeze #fcfcfc;
+@define-color theme_selected_fg_color_breeze #0d0f16;
 /*
 decoration color of views */
 @define-color theme_view_active_decoration_color_breeze #4ccf9f;
