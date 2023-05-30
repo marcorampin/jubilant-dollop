@@ -1,5 +1,5 @@
 {
-    "height": 40, // Waybar height (to be removed for auto height)
+    "height": 28, // Waybar height (to be removed for auto height)
     "layer": "top", // Waybar at top layer
     "modules-left": ["wlr/workspaces", "sway/workspaces#sway", "hyprland/submap", "sway/mode", "network", "pulseaudio", "backlight", "battery", "custom/weather"],
     "modules-center":["hyprland/window", "sway/window"],
