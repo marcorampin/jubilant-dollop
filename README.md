@@ -29,4 +29,4 @@ Arch+Hyprland (and sway) configuration dot files
 Inspiration/sources by:
 - theme: [m-gail](https://github.com/m-gail/dotfiles)
 - waybar: [1am1Simp1e](https://github.com/1amSimp1e/dots/tree/balcony%F0%9F%9A%8A)
-- wallpapers: [©Marco Rampin](https://marcorampin.github.io/)
+- wallpapers: [marcorampin](https://marcorampin.github.io/)
