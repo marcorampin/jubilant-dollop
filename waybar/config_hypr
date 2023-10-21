@@ -1,25 +1,26 @@
 {
     "height": 28, // Waybar height (to be removed for auto height)
     "layer": "top", // Waybar at top layer
-    "modules-left": ["sway/workspaces", "sway/mode", "network", "pulseaudio", "backlight", "battery", "custom/weather"],
-    "modules-center":["sway/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/submap", "network", "pulseaudio", "backlight", "battery", "custom/weather"],
+    "modules-center":["hyprland/window"],
     "modules-right": ["idle_inhibitor", "clock", "custom/power-menu"],
-    "sway/workspaces": {
+    "wlr/workspaces": {
       "disable-scroll": true,
+      "sort-by-number": true,
       "all-outputs": true,
       "format": "{name}",
       "on-click": "activate",
     },
-    "sway/window": {
+    "hyprland/window": {
         "format": "{}",
 	    "max-length": 60,
     },
-    "sway/mode": {
+    "hyprland/submap": {
 		"format": "{}"
     },
     "clock": {
         "format": "{:%H:%M - %d.%m}",
-	"tooltip-format": "{:%a %d %b %Y}",
+		"tooltip-format": "{:%a %d %b %Y}",
     },
 
     "backlight": {
@@ -85,6 +86,6 @@
     },
     "custom/power-menu": {
         "format": " ⏻ ",
-        "on-click": "wlogout --protocol layer-shell",
+        "on-click": "wlogout --protocol layer-shell -l ~/.config/wlogout/layout_hypr",
     }, 
 }
