@@ -23,7 +23,7 @@ set $menu wofi
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/odin-dark.jpg fill
+exec ~/.config/desktop_scripts/random-wallpaper.sh ~/Pictures/wallpaper 30m
 #
 # Example configuration:
 #
@@ -60,6 +60,7 @@ set $touchpad "1267:12631:ASUE1409:00_04F3:3157_Touchpad"
 
    input * {
        xkb_layout "it"
+       xkb_options "compose:rctrl"
    }
 
 #
@@ -73,7 +74,7 @@ set $touchpad "1267:12631:ASUE1409:00_04F3:3157_Touchpad"
     # Start a terminal
     bindsym $mod+Return exec $term
     # Launch programs
-    bindsym $mod+e exec thunar
+    bindsym $mod+e exec pcmanfm
     bindsym $mod+Shift+x exec xkill
     bindsym $mod+b exec brave
     bindsym $mod+v exec cliphist list | wofi --show dmenu -H 300 -W 500   | cliphist decode | wl-copy
@@ -97,7 +98,7 @@ set $touchpad "1267:12631:ASUE1409:00_04F3:3157_Touchpad"
 
     # Exit sway (logs you out of your Wayland session)
     #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-    bindsym $mod+Shift+q exec 'swaymsg exit'
+    #bindsym $mod+Shift+q exec 'swaymsg exit'
     bindsym $mod+F9 exec swaylock
     bindsym $mod+Escape exec killall wlogout || wlogout --protocol layer-shell
 
@@ -258,7 +259,7 @@ default_border pixel 3
 default_floating_border pixel 3
 
 
-client.focused #4ccf9f #4ccf9f #0d0f16 #4ccf9f #4ccf9f
+client.focused #9ab9e4 #9ab9e4 #1b1e20 #9ab9e4 #9ab9e4
 title_align left
 
 #
