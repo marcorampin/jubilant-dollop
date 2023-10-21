@@ -1,10 +1,12 @@
 # jubilant-dollop
 Arch+Hyprland (and sway) configuration dot files
 
-![desktop1](https://github.com/marcorampin/jubilant-dollop/assets/71671995/963c6c05-93bc-4fc4-b4a4-d6af5aea521e)
-![desktop2](https://github.com/marcorampin/jubilant-dollop/assets/71671995/f252aed0-10c3-4063-93d4-d2331f6ecf22)
-![desktop3](https://github.com/marcorampin/jubilant-dollop/assets/71671995/2880f541-9933-48f8-a62c-e82193bdf92f)
-![desktop4](https://github.com/marcorampin/jubilant-dollop/assets/71671995/a9ec6cf7-50bf-4507-9637-ffd6a3dd834c)
+![desktop1](https://github.com/marcorampin/jubilant-dollop/assets/71671995/d031851d-b485-418a-8da3-c125a0d9c789
+)
+![desktop2](https://github.com/marcorampin/jubilant-dollop/assets/71671995/9d510f89-038b-4110-b754-f11e0844c221)
+![desktop3](https://github.com/marcorampin/jubilant-dollop/assets/71671995/cd96c7b8-a407-4d6f-9c3d-b257084f1c65)
+![desktop4](https://github.com/marcorampin/jubilant-dollop/assets/71671995/7ce90d51-a21a-47d4-87af-758382e99b0a)
+
 
 
 ### Configuration:
@@ -27,4 +29,4 @@ Arch+Hyprland (and sway) configuration dot files
 Inspiration/sources by:
 - theme: [m-gail](https://github.com/m-gail/dotfiles)
 - waybar: [1am1Simp1e](https://github.com/1amSimp1e/dots/tree/balcony%F0%9F%9A%8A)
-- wallpaper: [elementaryOS](https://github.com/elementary/wallpapers)
+- wallpapers: [©Marco Rampin](https://marcorampin.github.io/)
