@@ -8,6 +8,20 @@ e.g. url("/home/marco/.config/gtk-3.0/assets/dash-symbolic.svg") to url("/path/t
    ----------------
    use responsibly! */
 /*
+view hover decoration color
+background color of hovering selected widgets
+base background color of selections
+decoration color of views
+base background color of selections on backdrop windows, alt
+*/
+@define-color main_color rgba(154, 185, 228, 1);   
+   
+/*
+text widgets and the like base background color */
+@define-color bg_color rgba(27, 30, 32, 1);
+
+
+/*
 widget text/foreground color */
 @define-color theme_fg_color_breeze #fcfcfc;
 /*
@@ -17,26 +31,11 @@ text color for entries, views and content in general */
 widget base background color */
 @define-color theme_bg_color_breeze #2a2e32;
 /*
-text widgets and the like base background color */
-@define-color theme_base_color_breeze #1b1e20;
-/*
-view hover decoration color*/
-@define-color theme_view_hover_decoration_color_breeze #4ccf9f;
-/*
-background color of hovering selected widgets*/
-@define-color theme_hovering_selected_bg_color_breeze #4ccf9f;
-/*
-base background color of selections */
-@define-color theme_selected_bg_color_breeze #4ccf9f;
-/*
 text/foreground color of selections */
-@define-color theme_selected_fg_color_breeze #0d0f16;
-/*
-decoration color of views */
-@define-color theme_view_active_decoration_color_breeze #4ccf9f;
+/*@define-color bg_color #0d0f16;*/
 /*
 base background color of insensitive selections */
-@define-color insensitive_selected_bg_color_breeze rgba(76, 207, 159, 0.35);
+@define-color insensitive_selected_bg_color_breeze rgba(154, 185, 228, 0.35);
 /*
 base background color of insensitive widgets */
 @define-color insensitive_bg_color_breeze #262a2d;
@@ -65,17 +64,14 @@ widget base background color on backdrop windows */
 text widgets and the like base background color on backdrop windows */
 @define-color theme_unfocused_base_color_breeze #1b1e20;
 /*
-base background color of selections on backdrop windows, alt */
-@define-color theme_unfocused_selected_bg_color_alt_breeze #4ccf9f;
-/*
 base background color of selections on backdrop windows */
-@define-color theme_unfocused_selected_bg_color_breeze rgba(76, 207, 159, 0.5);
+@define-color theme_unfocused_selected_bg_color_breeze rgba(154, 185, 228, 0.5);
 /*
 text/foreground color of selections on backdrop windows */
 @define-color theme_unfocused_selected_fg_color_breeze #fcfcfc;
 /*
 base background color of insensitive selections on backdrop windows */
-@define-color insensitive_unfocused_selected_bg_color_breeze rgba(48, 179, 131, 0.35);
+@define-color insensitive_unfocused_selected_bg_color_breeze rgba(54, 116, 201, 0.35);
 /*
 text foreground color of insensitive widgets on backdrop windows*/
 @define-color insensitive_unfocused_fg_color_breeze rgba(229, 229, 229, 0.35);
@@ -109,23 +105,19 @@ widgets main borders color insensitive backdrop */
 *
 */
 @define-color theme_button_background_normal_breeze #31363b;
-@define-color theme_button_decoration_hover_breeze  #4ccf9f;
-@define-color theme_button_decoration_focus_breeze  #4ccf9f;
 @define-color theme_button_foreground_normal_breeze #fcfcfc;
 @define-color theme_button_foreground_active_breeze #fcfcfc;
 @define-color theme_button_background_insensitive_breeze        rgba(45, 49, 54, 0.35);
-@define-color theme_button_decoration_hover_insensitive_breeze  rgba(48, 179, 131, 0.35);
-@define-color theme_button_decoration_focus_insensitive_breeze  rgba(48, 179, 131, 0.35);
+@define-color theme_button_decoration_hover_insensitive_breeze  rgba(54, 116, 201, 0.35);
+@define-color theme_button_decoration_focus_insensitive_breeze  rgba(54, 116, 201, 0.35);
 @define-color theme_button_foreground_insensitive_breeze        rgba(229, 229, 229, 0.35);
 @define-color theme_button_foreground_active_insensitive_breeze rgba(229, 229, 229, 0.35);
 @define-color theme_button_background_backdrop_breeze        #31363b;
-@define-color theme_button_decoration_hover_backdrop_breeze  #4ccf9f;
-@define-color theme_button_decoration_focus_backdrop_breeze  #4ccf9f;
 @define-color theme_button_foreground_backdrop_breeze        #fcfcfc;
 @define-color theme_button_foreground_active_backdrop_breeze #fcfcfc;
 @define-color theme_button_background_backdrop_insensitive_breeze        rgba(45, 49, 54, 0.35);
-@define-color theme_button_decoration_hover_backdrop_insensitive_breeze  rgba(48, 179, 131, 0.35);
-@define-color theme_button_decoration_focus_backdrop_insensitive_breeze  rgba(48, 179, 131, 0.35);
+@define-color theme_button_decoration_hover_backdrop_insensitive_breeze  rgba(54, 116, 201, 0.35);
+@define-color theme_button_decoration_focus_backdrop_insensitive_breeze  rgba(54, 116, 201, 0.35);
 @define-color theme_button_foreground_backdrop_insensitive_breeze        rgba(229, 229, 229, 0.35);
 @define-color theme_button_foreground_active_backdrop_insensitive_breeze rgba(229, 229, 229, 0.35);
 /*
@@ -142,7 +134,7 @@ these are pretty self explicative */
 @define-color warning_color_insensitive_backdrop_breeze rgba(224, 105, 0, 0.35);
 @define-color error_color_insensitive_backdrop_breeze   rgba(214, 46, 63, 0.35);
 @define-color success_color_insensitive_backdrop_breeze rgba(35, 158, 87, 0.35);
-@define-color link_color_breeze #248662;
+@define-color link_color_breeze #285797;
 @define-color link_visited_color_breeze #9b59b6;
 /*
 *
@@ -173,9 +165,9 @@ these are pretty self explicative */
 @define-color theme_fg_color @theme_fg_color_breeze;
 @define-color theme_text_color @theme_text_color_breeze;
 @define-color theme_bg_color @theme_bg_color_breeze;
-@define-color theme_base_color @theme_base_color_breeze;
-@define-color theme_selected_bg_color @theme_selected_bg_color_breeze;
-@define-color theme_selected_fg_color @theme_selected_fg_color_breeze;
+@define-color theme_base_color @bg_color;
+@define-color theme_selected_bg_color @main_color;
+@define-color theme_selected_fg_color @bg_color;
 @define-color insensitive_bg_color @insensitive_bg_color_breeze;
 @define-color insensitive_fg_color @insensitive_fg_color_breeze;
 @define-color insensitive_base_color @insensitive_base_color_breeze;
@@ -246,14 +238,14 @@ button:disabled:visited, label:disabled selection {
   headerbar.selection-mode .gtkstyle-fallback.subtitle:link,
   headerbar.selection-mode button.subtitle:link,
   headerbar.selection-mode button.subtitle:visited {
-    background-color: @theme_selected_bg_color_breeze;
-    color: @theme_selected_fg_color_breeze; }
+    background-color: @main_color;
+    color: @bg_color; }
 
 .view text,
 textview text,
 .view {
   color: @theme_text_color_breeze;
-  background-color: @theme_base_color_breeze; }
+  background-color: @bg_color; }
   .view text:backdrop,
   textview text:backdrop,
   .view:backdrop,
@@ -302,7 +294,7 @@ textview text,
     border-radius: 0.75mm; }
 
 textview border {
-  background-color: @theme_base_color_breeze;
+  background-color: @bg_color;
   background-image: image(@borders_breeze);
   background-repeat: no-repeat; }
   textview border:backdrop {
@@ -324,8 +316,8 @@ textview border {
 rubberband,
 treeview.view rubberband,
 flowbox rubberband {
-  border: 1px solid @theme_selected_bg_color_breeze;
-  background-color: alpha(@theme_selected_bg_color_breeze,0.8); }
+  border: 1px solid @main_color;
+  background-color: alpha(@main_color,0.8); }
   .rubberband:backdrop, label:backdrop selection.rubberband,
   rubberband:backdrop,
   treeview.view rubberband:backdrop {
@@ -356,8 +348,8 @@ label.separator {
     color: @theme_unfocused_fg_color_breeze; }
 
 label selection {
-  background-color: @theme_selected_bg_color_breeze;
-  color: @theme_selected_fg_color_breeze; }
+  background-color: @main_color;
+  color: @bg_color; }
 
 label:disabled {
   color: @insensitive_fg_color_breeze; }
@@ -441,8 +433,8 @@ flowbox headerbar.selection-mode headerbar button.subtitle:visited,
 headerbar.selection-mode headerbar flowbox flowboxchild.subtitle:link,
 headerbar.selection-mode headerbar flowbox button.subtitle:link,
 headerbar.selection-mode headerbar flowbox button.subtitle:visited, label:disabled selection, label:backdrop selection {
-  background-color: @theme_selected_bg_color_breeze;
-  color: @theme_selected_fg_color_breeze; }
+  background-color: @main_color;
+  color: @bg_color; }
   .sidebar:hover:selected,
   headerbar.selection-mode button.sidebar.subtitle:hover:visited, row:hover:selected, spinbutton:not(.vertical) selection:hover:focus, spinbutton:not(.vertical) selection:hover,
   entry selection:hover:focus,
@@ -455,7 +447,7 @@ headerbar.selection-mode headerbar flowbox button.subtitle:visited, label:disabl
   textview text:hover:selected, .view text selection:hover,
   textview text selection:hover:focus,
   textview text selection:hover, flowbox flowboxchild:hover:selected, label:disabled selection:hover, label:backdrop selection:hover {
-    background-color: @theme_hovering_selected_bg_color_breeze;
+    background-color: @main_color;
     color: @theme_fg_color_breeze; }
   .sidebar:backdrop:selected,
   headerbar.selection-mode .sidebar.subtitle:backdrop:link,
@@ -517,7 +509,7 @@ flowbox headerbar.selection-mode headerbar button.subtitle:visited,
 headerbar.selection-mode headerbar flowbox flowboxchild.subtitle:link,
 headerbar.selection-mode headerbar flowbox button.subtitle:link,
 headerbar.selection-mode headerbar flowbox button.subtitle:visited, label:disabled selection, label:backdrop selection {
-  background-color: @theme_selected_bg_color_breeze;
+  background-color: @main_color;
   border-radius: 0px; }
   .sidebar row:selected, .sidebar:selected,
   headerbar.selection-mode .sidebar.subtitle:link,
@@ -571,7 +563,7 @@ headerbar.selection-mode headerbar flowbox button.subtitle:visited, label:disabl
   headerbar.selection-mode headerbar flowbox flowboxchild.subtitle:link,
   headerbar.selection-mode headerbar flowbox button.subtitle:link,
   headerbar.selection-mode headerbar flowbox button.subtitle:visited, label:disabled selection, label:backdrop selection {
-    color: @theme_selected_fg_color_breeze; }
+    color: @bg_color; }
     .sidebar:disabled:selected,
     headerbar.selection-mode .sidebar.subtitle:disabled:link,
     headerbar.selection-mode button.sidebar.subtitle:disabled:visited, row:disabled:selected, spinbutton:not(.vertical) selection:disabled:focus, spinbutton:not(.vertical) selection:disabled,
@@ -596,9 +588,9 @@ headerbar.selection-mode headerbar flowbox button.subtitle:visited, label:disabl
  ***********/
 @keyframes needs_attention {
   from {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.01, to(@theme_button_decoration_focus_breeze), to(transparent)); }
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.01, to(@main_color), to(transparent)); }
   to {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(@theme_selected_bg_color_breeze), to(transparent)); } }
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(@main_color), to(transparent)); } }
 
 popover.background.touch-selection button.osd, popover.background.magnifier button.osd,
 button.osd, .csd popover.background.touch-selection button, .csd popover.background.magnifier button, popover.background.touch-selection button, popover.background.magnifier button,
@@ -616,8 +608,8 @@ button {
   
   button.suggested-action.osd, popover.background.touch-selection button.suggested-action, popover.background.magnifier button.suggested-action,
   button.suggested-action {
-    background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-    border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+    background-color: alpha(@main_color,0.2);
+    border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
   
   button.destructive-action.osd, popover.background.touch-selection button.destructive-action, popover.background.magnifier button.destructive-action,
   button.destructive-action {
@@ -636,7 +628,7 @@ button {
   
   button.osd:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover,
   button:hover {
-    border-color: @theme_button_decoration_hover_breeze; }
+    border-color: @main_color; }
     popover.background.touch-selection button:hover:not(:checked):not(:active), popover.background.magnifier button:hover:not(:checked):not(:active),
     button:hover:not(:checked):not(:active) {
       background: @theme_button_background_normal_breeze; }
@@ -644,11 +636,11 @@ button {
   button.osd:active, popover.background.touch-selection button:active, popover.background.magnifier button:active,
   button:active {
     box-shadow: none;
-    background: alpha(@theme_button_decoration_hover_breeze,0.333); }
+    background: alpha(@main_color,0.333); }
   
   button.osd:focus, popover.background.touch-selection button:focus, popover.background.magnifier button:focus,
   button:focus {
-    border-color: @theme_button_decoration_focus_breeze; }
+    border-color: @main_color; }
   
   button.osd:disabled, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled,
   button:disabled {
@@ -673,8 +665,8 @@ button {
     -gtk-icon-shadow: none; }
     popover.background.touch-selection button.suggested-action, popover.background.magnifier button.suggested-action,
     button.flat.suggested-action {
-      background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-      border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+      background-color: alpha(@main_color,0.2);
+      border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
     popover.background.touch-selection button.destructive-action, popover.background.magnifier button.destructive-action,
     button.flat.destructive-action {
       background-color: alpha(@error_color_breeze,0.2);
@@ -685,17 +677,17 @@ button {
       background-color: alpha(@theme_button_foreground_normal_breeze,0.125); }
     popover.background.touch-selection button.flat:hover, popover.background.magnifier button.flat:hover,
     button.flat:hover {
-      border-color: @theme_button_decoration_hover_breeze; }
+      border-color: @main_color; }
       
       button.flat:hover:not(:checked):not(:active) {
         background: unset; }
     popover.background.touch-selection button.flat:active, popover.background.magnifier button.flat:active,
     button.flat:active {
-      border-color: @theme_button_decoration_hover_breeze;
-      background-color: alpha(@theme_button_decoration_hover_breeze,0.333); }
+      border-color: @main_color;
+      background-color: alpha(@main_color,0.333); }
     popover.background.touch-selection button.flat:focus, popover.background.magnifier button.flat:focus,
     button.flat:focus {
-      border-color: @theme_button_decoration_focus_breeze; }
+      border-color: @main_color; }
   popover.background.touch-selection button.osd separator, popover.background.magnifier button.osd separator,
   button.osd separator, .csd popover.background.touch-selection button separator, .csd popover.background.magnifier button separator, popover.background.touch-selection button separator, popover.background.magnifier button separator,
   button separator {
@@ -748,12 +740,12 @@ headerbar.selection-mode button.subtitle:visited button,
 headerbar.selection-mode headerbar row.subtitle:link button,
 headerbar.selection-mode headerbar button.subtitle:link button,
 headerbar.selection-mode headerbar button.subtitle:visited button {
-  border-color: @theme_selected_bg_color_breeze; }
+  border-color: @main_color; }
   row:selected button.flat:not(:active):not(:checked):not(:hover):not(disabled),
   headerbar.selection-mode row.subtitle:link button.flat:not(:active):not(:checked):not(:hover):not(disabled),
   headerbar.selection-mode button.subtitle:link button.flat:not(:active):not(:checked):not(:hover):not(disabled),
   headerbar.selection-mode button.subtitle:visited button.flat:not(:active):not(:checked):not(:hover):not(disabled) {
-    color: @theme_selected_fg_color_breeze;
+    color: @bg_color;
     border-color: transparent; }
     row:selected label:backdrop selection:not(disabled),
     headerbar.selection-mode row.subtitle:link label:backdrop selection:not(disabled),
@@ -821,7 +813,7 @@ combobox > box > button.combo:only-child arrow {
 
 stacksidebar.sidebar row.needs-attention > .label, popover.background.touch-selection .stack-switcher > button.needs-attention > label, popover.background.magnifier .stack-switcher > button.needs-attention > label, popover.background.touch-selection .stack-switcher > button.needs-attention > image, popover.background.magnifier .stack-switcher > button.needs-attention > image, .stack-switcher > button.needs-attention > label, .stack-switcher > button.needs-attention > image {
   animation: needs_attention 150ms ease-in;
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(@theme_button_decoration_focus_breeze), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(@theme_button_foreground_normal_breeze), to(transparent));
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(@main_color), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(@theme_button_foreground_normal_breeze), to(transparent));
   background-size: 6px 6px, 6px 6px;
   background-repeat: no-repeat;
   background-position: right 3px, right 4px; }
@@ -890,28 +882,28 @@ buttonbox.linked:not(.vertical):not(.dialog-action-area) button {
   box.inline-toolbar:not(.vertical):not(.dialog-action-area) button:focus + entry,
   buttonbox.linked:not(.vertical):not(.dialog-action-area) entry:focus + entry,
   buttonbox.linked:not(.vertical):not(.dialog-action-area) button:focus + entry {
-    border-left-color: @theme_view_active_decoration_color_breeze; }
+    border-left-color: @main_color; }
   box.linked:not(.vertical):not(.dialog-action-area) entry:focus + button,
   box.linked:not(.vertical):not(.dialog-action-area) button:focus + button,
   box.inline-toolbar:not(.vertical):not(.dialog-action-area) entry:focus + button,
   box.inline-toolbar:not(.vertical):not(.dialog-action-area) button:focus + button,
   buttonbox.linked:not(.vertical):not(.dialog-action-area) entry:focus + button,
   buttonbox.linked:not(.vertical):not(.dialog-action-area) button:focus + button {
-    border-left-color: @theme_button_decoration_focus_breeze; }
+    border-left-color: @main_color; }
   box.linked:not(.vertical):not(.dialog-action-area) entry:hover + entry,
   box.linked:not(.vertical):not(.dialog-action-area) button:hover + entry,
   box.inline-toolbar:not(.vertical):not(.dialog-action-area) entry:hover + entry,
   box.inline-toolbar:not(.vertical):not(.dialog-action-area) button:hover + entry,
   buttonbox.linked:not(.vertical):not(.dialog-action-area) entry:hover + entry,
   buttonbox.linked:not(.vertical):not(.dialog-action-area) button:hover + entry {
-    border-left-color: @theme_view_active_decoration_color_breeze; }
+    border-left-color: @main_color; }
   box.linked:not(.vertical):not(.dialog-action-area) entry:hover + button,
   box.linked:not(.vertical):not(.dialog-action-area) button:hover + button,
   box.inline-toolbar:not(.vertical):not(.dialog-action-area) entry:hover + button,
   box.inline-toolbar:not(.vertical):not(.dialog-action-area) button:hover + button,
   buttonbox.linked:not(.vertical):not(.dialog-action-area) entry:hover + button,
   buttonbox.linked:not(.vertical):not(.dialog-action-area) button:hover + button {
-    border-left-color: @theme_button_decoration_hover_breeze; }
+    border-left-color: @main_color; }
 
 box.linked.vertical:not(.dialog-action-area) entry,
 box.linked.vertical:not(.dialog-action-area) button,
@@ -972,28 +964,28 @@ buttonbox.linked.vertical:not(.dialog-action-area) button {
   box.inline-toolbar.vertical:not(.dialog-action-area) button:focus + entry,
   buttonbox.linked.vertical:not(.dialog-action-area) entry:focus + entry,
   buttonbox.linked.vertical:not(.dialog-action-area) button:focus + entry {
-    border-top-color: @theme_view_active_decoration_color_breeze; }
+    border-top-color: @main_color; }
   box.linked.vertical:not(.dialog-action-area) entry:focus + button,
   box.linked.vertical:not(.dialog-action-area) button:focus + button,
   box.inline-toolbar.vertical:not(.dialog-action-area) entry:focus + button,
   box.inline-toolbar.vertical:not(.dialog-action-area) button:focus + button,
   buttonbox.linked.vertical:not(.dialog-action-area) entry:focus + button,
   buttonbox.linked.vertical:not(.dialog-action-area) button:focus + button {
-    border-top-color: @theme_view_active_decoration_color_breeze; }
+    border-top-color: @main_color; }
   box.linked.vertical:not(.dialog-action-area) entry:hover + entry,
   box.linked.vertical:not(.dialog-action-area) button:hover + entry,
   box.inline-toolbar.vertical:not(.dialog-action-area) entry:hover + entry,
   box.inline-toolbar.vertical:not(.dialog-action-area) button:hover + entry,
   buttonbox.linked.vertical:not(.dialog-action-area) entry:hover + entry,
   buttonbox.linked.vertical:not(.dialog-action-area) button:hover + entry {
-    border-top-color: @theme_view_active_decoration_color_breeze; }
+    border-top-color: @main_color; }
   box.linked.vertical:not(.dialog-action-area) entry:hover + button,
   box.linked.vertical:not(.dialog-action-area) button:hover + button,
   box.inline-toolbar.vertical:not(.dialog-action-area) entry:hover + button,
   box.inline-toolbar.vertical:not(.dialog-action-area) button:hover + button,
   buttonbox.linked.vertical:not(.dialog-action-area) entry:hover + button,
   buttonbox.linked.vertical:not(.dialog-action-area) button:hover + button {
-    border-top-color: @theme_view_active_decoration_color_breeze; }
+    border-top-color: @main_color; }
 
 stackswitcher.linked button:not(.flat) {
   box-shadow: none;
@@ -1014,13 +1006,13 @@ stackswitcher.linked button:not(.flat) {
   stackswitcher.linked button:not(.flat):not(:only-child):not(:last-child) {
     margin-right: 0; }
   stackswitcher.linked button:not(.flat):focus + entry {
-    border-left-color: @theme_view_active_decoration_color_breeze; }
+    border-left-color: @main_color; }
   stackswitcher.linked button:not(.flat):focus + button {
-    border-left-color: @theme_button_decoration_focus_breeze; }
+    border-left-color: @main_color; }
   stackswitcher.linked button:not(.flat):hover + entry {
-    border-left-color: @theme_view_active_decoration_color_breeze; }
+    border-left-color: @main_color; }
   stackswitcher.linked button:not(.flat):hover + button {
-    border-left-color: @theme_button_decoration_hover_breeze; }
+    border-left-color: @main_color; }
 
 modelbutton.flat:backdrop, popover.background checkbutton.flat:backdrop,
 popover.background radiobutton.flat:backdrop, modelbutton.flat:backdrop:hover,
@@ -1055,7 +1047,7 @@ entry {
   border-radius: 0.75mm;
   color: @theme_text_color_breeze;
   border-color: @borders_breeze;
-  background-color: @theme_base_color_breeze;
+  background-color: @bg_color;
   box-shadow: none; }
   spinbutton:not(.vertical) image.left,
   entry image.left {
@@ -1072,11 +1064,11 @@ entry {
     padding: 2px;
     color: @theme_text_color_breeze;
     border-color: @borders_breeze;
-    background-color: @theme_base_color_breeze;
+    background-color: @bg_color;
     box-shadow: none; }
   spinbutton:focus:not(.vertical),
   entry:focus {
-    border-color: @theme_view_active_decoration_color_breeze; }
+    border-color: @main_color; }
   spinbutton:disabled:not(.vertical),
   entry:disabled {
     color: @insensitive_base_fg_color_breeze;
@@ -1139,10 +1131,10 @@ entry {
     color: mix(@theme_fg_color_breeze,@theme_text_color_breeze,0.8); }
     spinbutton:not(.vertical) image:hover,
     entry image:hover {
-      color: @theme_button_decoration_hover_breeze; }
+      color: @main_color; }
     spinbutton:not(.vertical) image:active,
     entry image:active {
-      color: @theme_button_decoration_focus_breeze; }
+      color: @main_color; }
     spinbutton:not(.vertical) image:backdrop,
     entry image:backdrop {
       color: mix(@theme_unfocused_fg_color_breeze,@theme_unfocused_fg_color_breeze,0.8); }
@@ -1152,7 +1144,7 @@ entry progress {
   margin: 1px;
   border-radius: 0;
   border-width: 0 0 2px;
-  border-color: @theme_selected_bg_color_breeze;
+  border-color: @main_color;
   border-style: solid;
   background-image: none;
   background-color: transparent;
@@ -1163,23 +1155,23 @@ entry progress {
     border-color: @theme_unfocused_selected_bg_color_breeze; }
 
 treeview acceleditor > label {
-  background-color: @theme_selected_bg_color_breeze; }
+  background-color: @main_color; }
 
 treeview entry.flat, treeview entry {
   border-radius: 0;
   background-image: none;
-  background-color: @theme_base_color_breeze; }
+  background-color: @bg_color; }
   treeview entry.flat:focus, treeview entry:focus {
-    border-color: @theme_view_active_decoration_color_breeze; }
+    border-color: @main_color; }
 
 combobox > box > button.combo:not(:only-child) {
   background: none;
   color: @theme_text_color_breeze;
   border-color: @borders_breeze;
-  background-color: @theme_base_color_breeze;
+  background-color: @bg_color;
   box-shadow: none; }
   combobox > box > button.combo:not(:only-child):focus {
-    border-color: @theme_view_active_decoration_color_breeze; }
+    border-color: @main_color; }
   combobox > box > button.combo:not(:only-child):disabled, label:disabled combobox > box > selection:not(:only-child) {
     color: @insensitive_base_fg_color_breeze;
     border-color: @insensitive_borders_breeze;
@@ -1215,8 +1207,8 @@ combobox > box > button.combo:not(:only-child) {
     background: linear-gradient(180deg, mix(@theme_button_background_normal_breeze,white,0.03125) 0%, @theme_button_background_normal_breeze 50%, mix(@theme_button_background_normal_breeze,black,0.03125) 100%); }
     .app-notification button.suggested-action,
     .app-notification.frame button.suggested-action {
-      background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-      border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+      background-color: alpha(@main_color,0.2);
+      border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
     .app-notification button.destructive-action,
     .app-notification.frame button.destructive-action {
       background-color: alpha(@error_color_breeze,0.2);
@@ -1231,17 +1223,17 @@ combobox > box > button.combo:not(:only-child) {
       box-shadow: none; }
     .app-notification button:hover,
     .app-notification.frame button:hover {
-      border-color: @theme_button_decoration_hover_breeze; }
+      border-color: @main_color; }
       .app-notification button:hover:not(:checked):not(:active),
       .app-notification.frame button:hover:not(:checked):not(:active) {
         background: @theme_button_background_normal_breeze; }
     .app-notification button:active,
     .app-notification.frame button:active {
       box-shadow: none;
-      background: alpha(@theme_button_decoration_hover_breeze,0.333); }
+      background: alpha(@main_color,0.333); }
     .app-notification button:focus,
     .app-notification.frame button:focus {
-      border-color: @theme_button_decoration_focus_breeze; }
+      border-color: @main_color; }
     .app-notification button:disabled,
     .app-notification.frame button:disabled {
       box-shadow: none;
@@ -1264,8 +1256,8 @@ combobox > box > button.combo:not(:only-child) {
       -gtk-icon-shadow: none; }
       .app-notification button.flat.suggested-action,
       .app-notification.frame button.flat.suggested-action {
-        background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-        border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+        background-color: alpha(@main_color,0.2);
+        border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
       .app-notification button.flat.destructive-action,
       .app-notification.frame button.flat.destructive-action {
         background-color: alpha(@error_color_breeze,0.2);
@@ -1276,17 +1268,17 @@ combobox > box > button.combo:not(:only-child) {
         background-color: alpha(@theme_button_foreground_normal_breeze,0.125); }
       .app-notification button.flat:hover,
       .app-notification.frame button.flat:hover {
-        border-color: @theme_button_decoration_hover_breeze; }
+        border-color: @main_color; }
         .app-notification button.flat:hover:not(:checked):not(:active),
         .app-notification.frame button.flat:hover:not(:checked):not(:active) {
           background: unset; }
       .app-notification button.flat:active,
       .app-notification.frame button.flat:active {
-        border-color: @theme_button_decoration_hover_breeze;
-        background-color: alpha(@theme_button_decoration_hover_breeze,0.333); }
+        border-color: @main_color;
+        background-color: alpha(@main_color,0.333); }
       .app-notification button.flat:focus,
       .app-notification.frame button.flat:focus {
-        border-color: @theme_button_decoration_focus_breeze; }
+        border-color: @main_color; }
   .app-notification border,
   .app-notification.frame border {
     border: none; }
@@ -1297,7 +1289,7 @@ combobox > box > button.combo:not(:only-child) {
 calendar {
   color: @theme_text_color_breeze;
   border: 1px solid @borders_breeze;
-  background-color: @theme_base_color_breeze; }
+  background-color: @bg_color; }
   calendar:selected,
   headerbar.selection-mode calendar.subtitle:link,
   headerbar.selection-mode button.subtitle:link,
@@ -1320,9 +1312,9 @@ calendar {
   calendar.button {
     color: @theme_button_foreground_normal_breeze; }
     calendar.button:hover {
-      color: @theme_button_decoration_hover_breeze; }
+      color: @main_color; }
     calendar.button:active {
-      color: @theme_button_decoration_focus_breeze; }
+      color: @main_color; }
     calendar.button:backdrop, label:backdrop selection.button {
       color: @theme_button_foreground_backdrop_breeze; }
   calendar:indeterminate, calendar.highlight {
@@ -1355,7 +1347,7 @@ radio {
   min-height: 14px;
   min-width: 14px;
   animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  background-color: @theme_base_color_breeze;
+  background-color: @bg_color;
   border: 1px solid alpha(@theme_button_foreground_normal_breeze,0.33);
   -gtk-icon-shadow: none;
   -gtk-icon-palette: fg @theme_fg_color_breeze; }
@@ -1364,22 +1356,22 @@ radio {
     margin: 0; }
   check:hover,
   radio:hover {
-    border: 1px solid @theme_button_decoration_hover_breeze; }
+    border: 1px solid @main_color; }
   check:disabled,
   radio:disabled {
     background-color: @insensitive_base_color_breeze;
     border-color: alpha(@insensitive_base_fg_color_breeze,0.33); }
   check:active,
   radio:active {
-    background: shade(@theme_base_color_breeze, 0.9); }
+    background: shade(@bg_color, 0.9); }
   check:focus,
   radio:focus {
-    border-color: @theme_button_decoration_focus_breeze; }
+    border-color: @main_color; }
   check:indeterminate, check:checked,
   radio:indeterminate,
   radio:checked {
-    border-color: @theme_button_decoration_hover_breeze;
-    background-color: alpha(@theme_button_decoration_hover_breeze,0.33); }
+    border-color: @main_color;
+    background-color: alpha(@main_color,0.33); }
     check:indeterminate:backdrop, label:backdrop selection:indeterminate, check:checked:backdrop, label:backdrop selection:checked,
     radio:indeterminate:backdrop,
     radio:checked:backdrop {
@@ -1443,7 +1435,7 @@ headerbar.selection-mode headerbar button.subtitle:visited colorswatch {
   :selected colorswatch.overlay,
   headerbar.selection-mode .subtitle:link colorswatch.overlay,
   headerbar.selection-mode button.subtitle:visited colorswatch.overlay, :selected colorswatch.overlay:hover {
-    border-color: @theme_selected_fg_color_breeze; }
+    border-color: @bg_color; }
 
 colorswatch:selected,
 headerbar.selection-mode colorswatch.subtitle:link,
@@ -1537,7 +1529,7 @@ headerbar.selection-mode headerbar colorswatch button.subtitle:visited {
   headerbar.selection-mode colorswatch overlay.subtitle:hover:link,
   headerbar.selection-mode colorswatch button:hover:link,
   headerbar.selection-mode colorswatch button:hover:visited {
-    border-color: @theme_button_decoration_hover_breeze; }
+    border-color: @main_color; }
 
 colorswatch#add-color-button {
   border-style: solid;
@@ -1549,8 +1541,8 @@ colorswatch#add-color-button {
   border-color: @borders_breeze;
   background: linear-gradient(180deg, mix(@theme_button_background_normal_breeze,white,0.03125) 0%, @theme_button_background_normal_breeze 50%, mix(@theme_button_background_normal_breeze,black,0.03125) 100%); }
   colorswatch#add-color-button.suggested-action {
-    background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-    border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+    background-color: alpha(@main_color,0.2);
+    border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
   colorswatch#add-color-button.destructive-action {
     background-color: alpha(@error_color_breeze,0.2);
     border-color: mix(@error_color_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
@@ -1561,14 +1553,14 @@ colorswatch#add-color-button {
     background: alpha(@theme_button_foreground_normal_breeze,0.125);
     box-shadow: none; }
   colorswatch#add-color-button:hover {
-    border-color: @theme_button_decoration_hover_breeze; }
+    border-color: @main_color; }
     colorswatch#add-color-button:hover:not(:checked):not(:active) {
       background: @theme_button_background_normal_breeze; }
   colorswatch#add-color-button:active {
     box-shadow: none;
-    background: alpha(@theme_button_decoration_hover_breeze,0.333); }
+    background: alpha(@main_color,0.333); }
   colorswatch#add-color-button:focus {
-    border-color: @theme_button_decoration_focus_breeze; }
+    border-color: @main_color; }
   colorswatch#add-color-button:disabled, label:disabled selection#add-color-button {
     box-shadow: none;
     color: @theme_button_foreground_insensitive_breeze;
@@ -1586,8 +1578,8 @@ colorswatch#add-color-button {
     text-shadow: none;
     -gtk-icon-shadow: none; }
     colorswatch#add-color-button overlay.suggested-action {
-      background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-      border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+      background-color: alpha(@main_color,0.2);
+      border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
     colorswatch#add-color-button overlay.destructive-action {
       background-color: alpha(@error_color_breeze,0.2);
       border-color: mix(@error_color_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
@@ -1595,14 +1587,14 @@ colorswatch#add-color-button {
       border-color: mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.3);
       background-color: alpha(@theme_button_foreground_normal_breeze,0.125); }
     colorswatch#add-color-button overlay:hover {
-      border-color: @theme_button_decoration_hover_breeze; }
+      border-color: @main_color; }
       colorswatch#add-color-button overlay:hover:not(:checked):not(:active) {
         background: unset; }
     colorswatch#add-color-button overlay:active {
-      border-color: @theme_button_decoration_hover_breeze;
-      background-color: alpha(@theme_button_decoration_hover_breeze,0.333); }
+      border-color: @main_color;
+      background-color: alpha(@main_color,0.333); }
     colorswatch#add-color-button overlay:focus {
-      border-color: @theme_button_decoration_focus_breeze; }
+      border-color: @main_color; }
 
 GtkColorButton.button {
   padding: 5px; }
@@ -1695,8 +1687,8 @@ headerbar {
     background: linear-gradient(180deg, mix(@theme_button_background_normal_breeze,white,0.03125) 0%, @theme_button_background_normal_breeze 50%, mix(@theme_button_background_normal_breeze,black,0.03125) 100%); }
     
     headerbar .linked button.suggested-action {
-      background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-      border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+      background-color: alpha(@main_color,0.2);
+      border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
     
     headerbar .linked button.destructive-action {
       background-color: alpha(@error_color_breeze,0.2);
@@ -1711,17 +1703,17 @@ headerbar {
       box-shadow: none; }
     
     headerbar .linked button:hover {
-      border-color: @theme_button_decoration_hover_breeze; }
+      border-color: @main_color; }
       
       headerbar .linked button:hover:not(:checked):not(:active) {
         background: @theme_button_background_normal_breeze; }
     
     headerbar .linked button:active {
       box-shadow: none;
-      background: alpha(@theme_button_decoration_hover_breeze,0.333); }
+      background: alpha(@main_color,0.333); }
     
     headerbar .linked button:focus {
-      border-color: @theme_button_decoration_focus_breeze; }
+      border-color: @main_color; }
     
     headerbar .linked button:disabled {
       box-shadow: none;
@@ -1746,8 +1738,8 @@ headerbar {
     color: @theme_titlebar_foreground_breeze; }
     
     headerbar button.suggested-action {
-      background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-      border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+      background-color: alpha(@main_color,0.2);
+      border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
     
     headerbar button.destructive-action {
       background-color: alpha(@error_color_breeze,0.2);
@@ -1758,17 +1750,17 @@ headerbar {
       background-color: alpha(@theme_button_foreground_normal_breeze,0.125); }
     
     headerbar button:hover {
-      border-color: @theme_button_decoration_hover_breeze; }
+      border-color: @main_color; }
       
       headerbar button:hover:not(:checked):not(:active) {
         background: unset; }
     
     headerbar button:active {
-      border-color: @theme_button_decoration_hover_breeze;
-      background-color: alpha(@theme_button_decoration_hover_breeze,0.333); }
+      border-color: @main_color;
+      background-color: alpha(@main_color,0.333); }
     
     headerbar button:focus {
-      border-color: @theme_button_decoration_focus_breeze; }
+      border-color: @main_color; }
     
     headerbar button:hover {
       color: @theme_titlebar_foreground_breeze; }
@@ -1830,17 +1822,17 @@ headerbar {
     
     headerbar.selection-mode separator,
     headerbar.selection-mode headerbar separator {
-      background-color: @theme_button_decoration_focus_breeze; }
+      background-color: @main_color; }
     
     headerbar.selection-mode button:not(.titlebutton),
     headerbar.selection-mode headerbar button:not(.titlebutton) {
-      background-color: alpha(@theme_button_decoration_focus_breeze,0.5); }
+      background-color: alpha(@main_color,0.5); }
       
       headerbar.selection-mode button:not(.titlebutton):active,
       headerbar.selection-mode button:not(.titlebutton):focus,
       headerbar.selection-mode headerbar button:not(.titlebutton):active,
       headerbar.selection-mode headerbar button:not(.titlebutton):focus {
-        background-color: @theme_button_decoration_focus_breeze; }
+        background-color: @main_color; }
     
     headerbar.selection-mode .selection-menu,
     headerbar.selection-mode headerbar .selection-menu {
@@ -2057,7 +2049,7 @@ button:visited {
     headerbar.selection-mode .subtitle:link button:visited,
     headerbar.selection-mode button.subtitle:link button:visited,
     headerbar.selection-mode button.subtitle:visited button:visited {
-      color: mix(@theme_selected_fg_color_breeze,@theme_selected_bg_color_breeze,0.6); }
+      color: mix(@bg_color,@main_color,0.6); }
   button:link > label:hover,
   button:visited > label:hover,
   headerbar.selection-mode .subtitle:hover:link,
@@ -2142,7 +2134,7 @@ button:visited {
     headerbar.selection-mode .subtitle:link button:hover:visited,
     headerbar.selection-mode button.subtitle:link button:hover:visited,
     headerbar.selection-mode button.subtitle:visited button:hover:visited {
-      color: mix(@theme_selected_fg_color_breeze,@theme_selected_bg_color_breeze,0.9); }
+      color: mix(@bg_color,@main_color,0.9); }
   button:link > label:active,
   button:visited > label:active,
   headerbar.selection-mode .subtitle:active:link,
@@ -2227,7 +2219,7 @@ button:visited {
     headerbar.selection-mode .subtitle:link button:active:visited,
     headerbar.selection-mode button.subtitle:link button:active:visited,
     headerbar.selection-mode button.subtitle:visited button:active:visited {
-      color: mix(@theme_selected_fg_color_breeze,@theme_selected_bg_color_breeze,0.8); }
+      color: mix(@bg_color,@main_color,0.8); }
   button:link > label:backdrop,
   button:visited > label:backdrop,
   headerbar.selection-mode .subtitle:backdrop:link,
@@ -2346,7 +2338,7 @@ button:visited {
   headerbar.selection-mode .subtitle:link button:visited,
   headerbar.selection-mode button.subtitle:link button:visited,
   headerbar.selection-mode button.subtitle:visited button:visited {
-    color: mix(@theme_selected_fg_color_breeze,@theme_selected_bg_color_breeze,0.8); }
+    color: mix(@bg_color,@main_color,0.8); }
 
 button:link,
 button:visited {
@@ -2365,36 +2357,36 @@ button:visited {
  *********/
 list {
   color: @theme_fg_color_breeze;
-  background: @theme_base_color_breeze;
+  background: @bg_color;
   border-radius: 3px; }
   list.content {
     border: 1px solid @borders_breeze; }
   list row {
-    background: @theme_base_color_breeze;
+    background: @bg_color;
     padding: 2px; }
 
 row.activatable.has-open-popup, row.activatable:hover {
-  background-color: @theme_selected_bg_color_breeze; }
+  background-color: @main_color; }
 
 row.activatable:active {
   box-shadow: none;
-  background-color: @theme_selected_bg_color_breeze; }
+  background-color: @main_color; }
 
 row.activatable:selected:active,
 headerbar.selection-mode .activatable.subtitle:active:link,
 headerbar.selection-mode button.activatable.subtitle:active:visited {
   box-shadow: none;
-  background-color: @theme_selected_bg_color_breeze; }
+  background-color: @main_color; }
 
 row.activatable:selected.has-open-popup,
 headerbar.selection-mode .activatable.has-open-popup.subtitle:link,
 headerbar.selection-mode button.activatable.has-open-popup.subtitle:visited, row.activatable:selected:hover,
 headerbar.selection-mode .activatable.subtitle:hover:link,
 headerbar.selection-mode button.activatable.subtitle:hover:visited {
-  background-color: @theme_selected_bg_color_breeze; }
+  background-color: @main_color; }
 
 row.activatable:selected:backdrop {
-  background-color: @theme_unfocused_selected_bg_color_alt_breeze; }
+  background-color: @main_color; }
 
 /*********
  * Menus *
@@ -2416,7 +2408,7 @@ menubar,
     padding: 1.25mm 2.5mm; }
     menubar > menuitem:hover,
     .menubar > menuitem:hover {
-      background-color: @theme_button_decoration_focus_breeze;
+      background-color: @main_color;
       color: @theme_button_foreground_active_breeze; }
     menubar > menuitem:disabled,
     .menubar > menuitem:disabled {
@@ -2434,7 +2426,7 @@ menubar,
 menu,
 .menu {
   padding: 1mm;
-  background-color: mix(@theme_bg_color_breeze,@theme_base_color_breeze,0.3);
+  background-color: mix(@theme_bg_color_breeze,@bg_color,0.3);
   border-radius: 0.75mm; }
   menu separator,
   .menu separator {
@@ -2449,8 +2441,8 @@ menu,
     border: 1px solid transparent; }
     menu menuitem:hover,
     .menu menuitem:hover {
-      background-color: alpha(@theme_selected_bg_color_breeze,0.3);
-      border: 1px solid @theme_button_decoration_focus_breeze;
+      background-color: alpha(@main_color,0.3);
+      border: 1px solid @main_color;
       border-radius: 0.75mm; }
     menu menuitem:disabled,
     .menu menuitem:disabled {
@@ -2494,10 +2486,10 @@ menu,
       -gtk-icon-source: -gtk-icontheme("go-down-symbolic"); }
     menu > arrow:hover,
     .menu > arrow:hover {
-      color: @theme_button_decoration_hover_breeze; }
+      color: @main_color; }
     menu > arrow:active,
     .menu > arrow:active {
-      color: @theme_button_decoration_focus_breeze; }
+      color: @main_color; }
     menu > arrow:backdrop,
     .menu > arrow:backdrop {
       background-color: @theme_unfocused_bg_color_breeze; }
@@ -2539,8 +2531,8 @@ popover.background radiobutton.button {
   .menuitem.button.flat:hover,
   popover.background checkbutton.button:hover,
   popover.background radiobutton.button:hover {
-    background-color: alpha(@theme_selected_bg_color_breeze,0.3);
-    border: 1px solid @theme_button_decoration_focus_breeze;
+    background-color: alpha(@main_color,0.3);
+    border: 1px solid @main_color;
     border-radius: 4px; }
   modelbutton.flat:selected, popover.background checkbutton.flat:selected,
   popover.background radiobutton.flat:selected,
@@ -2553,7 +2545,7 @@ popover.background radiobutton.button {
   .menuitem.button.flat:selected,
   popover.background checkbutton.button:selected,
   popover.background radiobutton.button:selected {
-    background-color: @theme_button_decoration_focus_breeze;
+    background-color: @main_color;
     color: @theme_button_foreground_active_breeze; }
   modelbutton.flat:backdrop, popover.background checkbutton.flat:backdrop,
   popover.background radiobutton.flat:backdrop, modelbutton.flat:backdrop:hover,
@@ -2695,7 +2687,7 @@ expander arrow {
   expander arrow:dir(rtl) {
     -gtk-icon-source: -gtk-icontheme("go-next-rtl-symbolic"); }
   expander arrow:hover {
-    color: shade(@theme_button_decoration_focus_breeze,1.3); }
+    color: shade(@main_color,1.3); }
   expander arrow:checked {
     -gtk-icon-source: -gtk-icontheme("go-down-symbolic"); }
 
@@ -2816,7 +2808,7 @@ notebook > header {
       border-radius: 0px 3px 0px 0px; }
     notebook > header.top > tabs > tab:hover, notebook > header.top > tabs > tab.prelight-page {
       transition: 0.15s;
-      background-color: alpha(@theme_selected_bg_color_breeze,0.2); }
+      background-color: alpha(@main_color,0.2); }
     notebook > header.top > tabs > tab > label {
       margin-left: -3px; }
     notebook > header.top > tabs > tab:checked {
@@ -2832,7 +2824,7 @@ notebook > header {
     notebook > header.top > tabs > tab:checked {
       transition: none;
       border-color: @borders_breeze;
-      border-top-color: @theme_selected_bg_color_breeze;
+      border-top-color: @main_color;
       border-radius: 3px 3px 0px 0px;
       background-color: @theme_bg_color_breeze; }
   notebook > header.top > tabs arrow.down ~ tab:checked:nth-child(2) {
@@ -2854,7 +2846,7 @@ notebook > header {
       border-radius: 0px 0px 3px 0px; }
     notebook > header.bottom > tabs > tab:hover, notebook > header.bottom > tabs > tab.prelight-page {
       transition: 0.15s;
-      background-color: alpha(@theme_selected_bg_color_breeze,0.2); }
+      background-color: alpha(@main_color,0.2); }
     notebook > header.bottom > tabs > tab > label {
       margin-left: -3px; }
     notebook > header.bottom > tabs > tab:checked {
@@ -2870,7 +2862,7 @@ notebook > header {
     notebook > header.bottom > tabs > tab:checked {
       transition: none;
       border-color: @borders_breeze;
-      border-bottom-color: @theme_selected_bg_color_breeze;
+      border-bottom-color: @main_color;
       border-radius: 0px 0px 3px 3px;
       background-color: @theme_bg_color_breeze; }
   notebook > header.bottom > tabs arrow.down ~ tab:checked:nth-child(2) {
@@ -2892,7 +2884,7 @@ notebook > header {
       border-radius: 0px 0px 0px 3px; }
     notebook > header.left > tabs > tab:hover, notebook > header.left > tabs > tab.prelight-page {
       transition: 0.15s;
-      background-color: alpha(@theme_selected_bg_color_breeze,0.2); }
+      background-color: alpha(@main_color,0.2); }
     notebook > header.left > tabs > tab > label {
       margin-top: -3px; }
     notebook > header.left > tabs > tab:checked {
@@ -2908,7 +2900,7 @@ notebook > header {
     notebook > header.left > tabs > tab:checked {
       transition: none;
       border-color: @borders_breeze;
-      border-left-color: @theme_selected_bg_color_breeze;
+      border-left-color: @main_color;
       border-radius: 3px 0px 0px 3px;
       background-color: @theme_bg_color_breeze; }
   notebook > header.left > tabs arrow.down ~ tab:checked:nth-child(2) {
@@ -2930,7 +2922,7 @@ notebook > header {
       border-radius: 0px 0px 3px 0px; }
     notebook > header.right > tabs > tab:hover, notebook > header.right > tabs > tab.prelight-page {
       transition: 0.15s;
-      background-color: alpha(@theme_selected_bg_color_breeze,0.2); }
+      background-color: alpha(@main_color,0.2); }
     notebook > header.right > tabs > tab > label {
       margin-top: -3px; }
     notebook > header.right > tabs > tab:checked {
@@ -2946,7 +2938,7 @@ notebook > header {
     notebook > header.right > tabs > tab:checked {
       transition: none;
       border-color: @borders_breeze;
-      border-right-color: @theme_selected_bg_color_breeze;
+      border-right-color: @main_color;
       border-radius: 0px 3px 3px 0px;
       background-color: @theme_bg_color_breeze; }
   notebook > header.right > tabs arrow.down ~ tab:checked:nth-child(2) {
@@ -2964,9 +2956,9 @@ notebook > header {
     border-right-color: @borders_breeze;
     box-shadow: inset -3px 0px 0px 0px @theme_bg_color_breeze; }
     notebook > header.top > tabs > tab.reorderable-page:hover, notebook > header.top > tabs > tab.reorderable-page.prelight-page {
-      box-shadow: inset 0px -3px 0px 0px alpha(@theme_selected_bg_color_breeze,0.2), inset -3px 0px 0px 0px @theme_bg_color_breeze; }
+      box-shadow: inset 0px -3px 0px 0px alpha(@main_color,0.2), inset -3px 0px 0px 0px @theme_bg_color_breeze; }
     notebook > header.top > tabs > tab.reorderable-page:checked {
-      box-shadow: inset 0px -3px 0px 0px @theme_selected_bg_color_breeze, inset -3px 0px 0px 0px @theme_bg_color_breeze; }
+      box-shadow: inset 0px -3px 0px 0px @main_color, inset -3px 0px 0px 0px @theme_bg_color_breeze; }
       notebook > header.top > tabs > tab.reorderable-page:checked:backdrop, label:backdrop notebook > header.top > tabs > selection:checked {
         background-color: @theme_unfocused_bg_color_breeze;
         border-color: transparent;
@@ -2986,9 +2978,9 @@ notebook > header {
     border-right-color: @borders_breeze;
     box-shadow: inset -3px 0px 0px 0px @theme_bg_color_breeze; }
     notebook > header.bottom > tabs > tab.reorderable-page:hover, notebook > header.bottom > tabs > tab.reorderable-page.prelight-page {
-      box-shadow: inset 0px -3px 0px 0px alpha(@theme_selected_bg_color_breeze,0.2), inset -3px 0px 0px 0px @theme_bg_color_breeze; }
+      box-shadow: inset 0px -3px 0px 0px alpha(@main_color,0.2), inset -3px 0px 0px 0px @theme_bg_color_breeze; }
     notebook > header.bottom > tabs > tab.reorderable-page:checked {
-      box-shadow: inset 0px -3px 0px 0px @theme_selected_bg_color_breeze, inset -3px 0px 0px 0px @theme_bg_color_breeze; }
+      box-shadow: inset 0px -3px 0px 0px @main_color, inset -3px 0px 0px 0px @theme_bg_color_breeze; }
       notebook > header.bottom > tabs > tab.reorderable-page:checked:backdrop, label:backdrop notebook > header.bottom > tabs > selection:checked {
         background-color: @theme_unfocused_bg_color_breeze;
         border-color: transparent;
@@ -3008,9 +3000,9 @@ notebook > header {
     border-bottom-color: @borders_breeze;
     box-shadow: inset 0px -3px 0px 0px @theme_bg_color_breeze; }
     notebook > header.left > tabs > tab.reorderable-page:hover, notebook > header.left > tabs > tab.reorderable-page.prelight-page {
-      box-shadow: inset 0px -3px 0px 0px alpha(@theme_selected_bg_color_breeze,0.2), inset 0px -3px 0px 0px @theme_bg_color_breeze; }
+      box-shadow: inset 0px -3px 0px 0px alpha(@main_color,0.2), inset 0px -3px 0px 0px @theme_bg_color_breeze; }
     notebook > header.left > tabs > tab.reorderable-page:checked {
-      box-shadow: inset 0px -3px 0px 0px @theme_selected_bg_color_breeze, inset 0px -3px 0px 0px @theme_bg_color_breeze; }
+      box-shadow: inset 0px -3px 0px 0px @main_color, inset 0px -3px 0px 0px @theme_bg_color_breeze; }
       notebook > header.left > tabs > tab.reorderable-page:checked:backdrop, label:backdrop notebook > header.left > tabs > selection:checked {
         background-color: @theme_unfocused_bg_color_breeze;
         border-color: transparent;
@@ -3030,9 +3022,9 @@ notebook > header {
     border-bottom-color: @borders_breeze;
     box-shadow: inset 0px -3px 0px 0px @theme_bg_color_breeze; }
     notebook > header.right > tabs > tab.reorderable-page:hover, notebook > header.right > tabs > tab.reorderable-page.prelight-page {
-      box-shadow: inset 0px -3px 0px 0px alpha(@theme_selected_bg_color_breeze,0.2), inset 0px -3px 0px 0px @theme_bg_color_breeze; }
+      box-shadow: inset 0px -3px 0px 0px alpha(@main_color,0.2), inset 0px -3px 0px 0px @theme_bg_color_breeze; }
     notebook > header.right > tabs > tab.reorderable-page:checked {
-      box-shadow: inset 0px -3px 0px 0px @theme_selected_bg_color_breeze, inset 0px -3px 0px 0px @theme_bg_color_breeze; }
+      box-shadow: inset 0px -3px 0px 0px @main_color, inset 0px -3px 0px 0px @theme_bg_color_breeze; }
       notebook > header.right > tabs > tab.reorderable-page:checked:backdrop, label:backdrop notebook > header.right > tabs > selection:checked {
         background-color: @theme_unfocused_bg_color_breeze;
         border-color: transparent;
@@ -3081,8 +3073,8 @@ notebook > header {
     min-width: 16px;
     border-radius: 0; }
     notebook > header > tabs > arrow.suggested-action {
-      background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-      border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+      background-color: alpha(@main_color,0.2);
+      border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
     notebook > header > tabs > arrow.destructive-action {
       background-color: alpha(@error_color_breeze,0.2);
       border-color: mix(@error_color_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
@@ -3090,14 +3082,14 @@ notebook > header {
       border-color: mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.3);
       background-color: alpha(@theme_button_foreground_normal_breeze,0.125); }
     notebook > header > tabs > arrow:hover {
-      border-color: @theme_button_decoration_hover_breeze; }
+      border-color: @main_color; }
       notebook > header > tabs > arrow:hover:not(:checked):not(:active) {
         background: unset; }
     notebook > header > tabs > arrow:active {
-      border-color: @theme_button_decoration_hover_breeze;
-      background-color: alpha(@theme_button_decoration_hover_breeze,0.333); }
+      border-color: @main_color;
+      background-color: alpha(@main_color,0.333); }
     notebook > header > tabs > arrow:focus {
-      border-color: @theme_button_decoration_focus_breeze; }
+      border-color: @main_color; }
     notebook > header > tabs > arrow:hover:not(:active):not(:backdrop) {
       background-clip: padding-box;
       background-image: none;
@@ -3143,8 +3135,8 @@ scrolledwindow undershoot {
   padding: 4px 8px;
   color: @theme_fg_color_breeze; }
   .path-bar button.suggested-action {
-    background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-    border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+    background-color: alpha(@main_color,0.2);
+    border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
   .path-bar button.destructive-action {
     background-color: alpha(@error_color_breeze,0.2);
     border-color: mix(@error_color_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
@@ -3155,14 +3147,14 @@ scrolledwindow undershoot {
     background: alpha(@theme_button_foreground_normal_breeze,0.125);
     box-shadow: none; }
   .path-bar button:hover {
-    border-color: @theme_button_decoration_hover_breeze; }
+    border-color: @main_color; }
     .path-bar button:hover:not(:checked):not(:active) {
       background: @theme_button_background_normal_breeze; }
   .path-bar button:active {
     box-shadow: none;
-    background: alpha(@theme_button_decoration_hover_breeze,0.333); }
+    background: alpha(@main_color,0.333); }
   .path-bar button:focus {
-    border-color: @theme_button_decoration_focus_breeze; }
+    border-color: @main_color; }
   .path-bar button:disabled {
     box-shadow: none;
     color: @theme_button_foreground_insensitive_breeze;
@@ -3171,7 +3163,7 @@ scrolledwindow undershoot {
     .path-bar button:disabled:active, .path-bar button:disabled:checked {
       color: @theme_button_foreground_active_insensitive_breeze; }
   .path-bar button:hover {
-    border-color: @theme_button_decoration_hover_breeze; }
+    border-color: @main_color; }
   .path-bar button:active, .path-bar button:checked {
     background-color: @borders_breeze;
     font-weight: normal; }
@@ -3214,8 +3206,8 @@ progressbar {
     margin: -1px;
     border-radius: 0.75mm;
     box-shadow: none;
-    background: linear-gradient(alpha(@theme_button_decoration_hover_breeze,0.5),alpha(@theme_button_decoration_hover_breeze,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
-    border: 1px solid @theme_button_decoration_hover_breeze; }
+    background: linear-gradient(alpha(@main_color,0.5),alpha(@main_color,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
+    border: 1px solid @main_color; }
   progressbar:backdrop progress {
     background: linear-gradient(alpha(@theme_unfocused_selected_bg_color_breeze,0.5),alpha(@theme_unfocused_selected_bg_color_breeze,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
     border-color: @theme_unfocused_selected_bg_color_breeze; }
@@ -3225,20 +3217,20 @@ progressbar {
 treeview.view.progressbar {
   border: 0px solid transparent;
   border-radius: 0.75mm;
-  background-color: @theme_selected_bg_color_breeze;
-  color: @theme_selected_fg_color_breeze;
+  background-color: @main_color;
+  color: @bg_color;
   background-image: none; }
   treeview.view.progressbar:selected:focus, treeview.view.progressbar:selected,
   headerbar.selection-mode .progressbar.subtitle:link,
   headerbar.selection-mode button.progressbar.subtitle:visited {
-    background-color: alpha(@theme_selected_bg_color_breeze,0.25); }
+    background-color: alpha(@main_color,0.25); }
 
 treeview.view.trough {
   background-color: mix(@theme_bg_color_breeze,@theme_fg_color_breeze,0.7); }
   treeview.view.trough:selected:focus, treeview.view.trough:selected,
   headerbar.selection-mode .trough.subtitle:link,
   headerbar.selection-mode button.trough.subtitle:visited {
-    background-color: alpha(@theme_selected_fg_color_breeze,0.3); }
+    background-color: alpha(@bg_color,0.3); }
 
 /*************
  * Level Bar *
@@ -3256,7 +3248,7 @@ levelbar trough {
   border-radius: 3px;
   color: @theme_text_color_breeze;
   border-color: @borders_breeze;
-  background-color: @theme_base_color_breeze;
+  background-color: @bg_color;
   box-shadow: none; }
   levelbar trough:backdrop {
     color: @theme_unfocused_text_color_breeze;
@@ -3271,8 +3263,8 @@ levelbar.vertical.discrete block {
   margin: 1px 0; }
 
 levelbar block:not(.empty) {
-  border: 1px solid @theme_button_decoration_hover_breeze;
-  background: linear-gradient(alpha(@theme_button_decoration_hover_breeze,0.5),alpha(@theme_button_decoration_hover_breeze,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
+  border: 1px solid @main_color;
+  background: linear-gradient(alpha(@main_color,0.5),alpha(@main_color,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
   box-shadow: none;
   border-radius: 0.75mm; }
   levelbar block:not(.empty):backdrop, levelbar label:backdrop selection:not(.empty), label:backdrop levelbar selection:not(.empty) {
@@ -3326,12 +3318,12 @@ scale {
     background: @theme_button_background_normal_breeze;
     margin: -9px; }
     scale slider:hover {
-      border-color: @theme_button_decoration_hover_breeze;
+      border-color: @main_color;
       border-radius: 50%; }
       scale slider:hover:backdrop, scale label:backdrop selection:hover, label:backdrop scale selection:hover {
         border-color: @theme_button_decoration_hover_insensitive_breeze; }
     scale slider:focus {
-      border-color: @theme_button_decoration_focus_breeze;
+      border-color: @main_color;
       border-radius: 50%; }
       scale slider:focus:backdrop, scale label:backdrop selection:focus, label:backdrop scale selection:focus {
         border-color: @theme_button_decoration_focus_insensitive_breeze; }
@@ -3349,7 +3341,7 @@ scale {
       background-color: @theme_button_background_normal_breeze; }
       scale slider:active:backdrop, scale label:backdrop selection:active, label:backdrop scale selection:active {
         background-color: @theme_button_background_normal_breeze;
-        border-color: @theme_button_decoration_focus_backdrop_breeze; }
+        border-color: @main_color; }
     scale slider:backdrop {
       background-color: @theme_button_background_backdrop_breeze;
       border-color: @unfocused_borders_breeze; }
@@ -3366,8 +3358,8 @@ scale {
   scale highlight {
     margin: -1px;
     border-radius: 0.75mm;
-    background: linear-gradient(alpha(@theme_button_decoration_hover_breeze,0.5),alpha(@theme_button_decoration_hover_breeze,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
-    border: 1px solid @theme_button_decoration_hover_breeze; }
+    background: linear-gradient(alpha(@main_color,0.5),alpha(@main_color,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
+    border: 1px solid @main_color; }
     scale highlight:disabled {
       background: none;
       border-color: transparent; }
@@ -3503,25 +3495,25 @@ scrollbar {
       background-image: linear-gradient(alpha(@theme_button_foreground_normal_breeze,0.25),alpha(@theme_button_foreground_normal_breeze,0.25)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
       box-shadow: 0 0 0 1px alpha(@theme_button_foreground_normal_breeze,0.45) inset; }
       scrollbar:hover trough slider:hover {
-        background-image: linear-gradient(alpha(@theme_button_decoration_hover_breeze,0.5),alpha(@theme_button_decoration_hover_breeze,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
-        box-shadow: 0 0 0 1px alpha(@theme_button_decoration_hover_breeze,0.9) inset; }
+        background-image: linear-gradient(alpha(@main_color,0.5),alpha(@main_color,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
+        box-shadow: 0 0 0 1px alpha(@main_color,0.9) inset; }
   scrollbar.horizontal trough {
     min-width: 14px;
     min-height: 6px; }
   *:focus ~ scrollbar:hover slider, button:focus:link ~ scrollbar:hover slider,
   button:focus:visited ~ scrollbar:hover slider, scrollbar ~ *:focus:hover slider, scrollbar ~ button:focus:hover:link slider,
   scrollbar ~ button:focus:hover:visited slider {
-    background-image: linear-gradient(alpha(@theme_button_decoration_hover_breeze,0.5),alpha(@theme_button_decoration_hover_breeze,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
-    box-shadow: 0 0 0 1px alpha(@theme_button_decoration_hover_breeze,0.9) inset; }
+    background-image: linear-gradient(alpha(@main_color,0.5),alpha(@main_color,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
+    box-shadow: 0 0 0 1px alpha(@main_color,0.9) inset; }
   *:focus ~ scrollbar.overlay-indicator slider, button:focus:link ~ scrollbar.overlay-indicator slider,
   button:focus:visited ~ scrollbar.overlay-indicator slider, scrollbar ~ *:focus.overlay-indicator slider, scrollbar ~ button:focus.overlay-indicator:link slider,
   scrollbar ~ button:focus.overlay-indicator:visited slider {
-    background-image: linear-gradient(alpha(alpha(@theme_button_decoration_focus_breeze,0.35),0.75),alpha(alpha(@theme_button_decoration_focus_breeze,0.35),0.75)), linear-gradient(alpha(@theme_bg_color_breeze,0.75),alpha(@theme_bg_color_breeze,0.75)); }
+    background-image: linear-gradient(alpha(alpha(@main_color,0.35),0.75),alpha(alpha(@main_color,0.35),0.75)), linear-gradient(alpha(@theme_bg_color_breeze,0.75),alpha(@theme_bg_color_breeze,0.75)); }
   *:focus ~ scrollbar.overlay-indicator:hover slider, button:focus:link ~ scrollbar.overlay-indicator:hover slider,
   button:focus:visited ~ scrollbar.overlay-indicator:hover slider, scrollbar ~ *:focus.overlay-indicator:hover slider, scrollbar ~ button:focus.overlay-indicator:hover:link slider,
   scrollbar ~ button:focus.overlay-indicator:hover:visited slider {
-    background-image: linear-gradient(alpha(@theme_button_decoration_hover_breeze,0.5),alpha(@theme_button_decoration_hover_breeze,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
-    box-shadow: 0 0 0 1px alpha(@theme_button_decoration_hover_breeze,0.9) inset; }
+    background-image: linear-gradient(alpha(@main_color,0.5),alpha(@main_color,0.5)), linear-gradient(@theme_bg_color_breeze,@theme_bg_color_breeze);
+    box-shadow: 0 0 0 1px alpha(@main_color,0.9) inset; }
   scrollbar slider {
     margin: -9px;
     margin-bottom: -6px;
@@ -3548,7 +3540,7 @@ scrollbar {
 .sidebar {
   border-radius: 0px;
   border-style: none;
-  background-color: @theme_base_color_breeze; }
+  background-color: @bg_color; }
   .sidebar:not(separator):dir(ltr), .sidebar:not(separator).left, .sidebar:not(separator).left:dir(rtl) {
     border-right: 1px solid mix(#2a2e32,#fcfcfc,0.07);
     border-left: none; }
@@ -3564,7 +3556,7 @@ scrollbar {
     .sidebar row.activatable:dir(rtl) {
       border-left: 3px solid transparent; }
     .sidebar row.activatable:selected:backdrop {
-      background-color: @theme_unfocused_selected_bg_color_alt_breeze; }
+      background-color: @main_color; }
   paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
     border-style: none; }
 
@@ -3580,13 +3572,13 @@ placessidebar row {
   placessidebar row > revealer {
     padding: 0 14px; }
   placessidebar row:selected {
-    color: @theme_selected_fg_color_breeze; }
+    color: @bg_color; }
   placessidebar row:disabled {
     color: @insensitive_fg_color_breeze; }
   placessidebar row:backdrop {
     color: @theme_unfocused_fg_color_breeze; }
     placessidebar row:backdrop:selected {
-      color: @theme_unfocused_selected_bg_color_alt_breeze; }
+      color: @main_color; }
     placessidebar row:backdrop:disabled {
       color: @insensitive_unfocused_fg_color_breeze; }
   placessidebar row image.sidebar-icon:dir(ltr) {
@@ -3612,8 +3604,8 @@ placessidebar row {
     margin-bottom: 3px;
     padding: 0; }
     button.sidebar-button.suggested-action {
-      background-color: alpha(@theme_button_decoration_focus_breeze,0.2);
-      border-color: mix(@theme_button_decoration_focus_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
+      background-color: alpha(@main_color,0.2);
+      border-color: mix(@main_color,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
     button.sidebar-button.destructive-action {
       background-color: alpha(@error_color_breeze,0.2);
       border-color: mix(@error_color_breeze,mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.333),0.5); }
@@ -3621,14 +3613,14 @@ placessidebar row {
       border-color: mix(@theme_button_background_normal_breeze,@theme_button_foreground_normal_breeze,0.3);
       background-color: alpha(@theme_button_foreground_normal_breeze,0.125); }
     button.sidebar-button:hover {
-      border-color: @theme_button_decoration_hover_breeze; }
+      border-color: @main_color; }
       button.sidebar-button:hover:not(:checked):not(:active) {
         background: unset; }
     button.sidebar-button:active {
-      border-color: @theme_button_decoration_hover_breeze;
-      background-color: alpha(@theme_button_decoration_hover_breeze,0.333); }
+      border-color: @main_color;
+      background-color: alpha(@main_color,0.333); }
     button.sidebar-button:focus {
-      border-color: @theme_button_decoration_focus_breeze; }
+      border-color: @main_color; }
   placessidebar row:selected:active {
     box-shadow: none; }
   placessidebar row.sidebar-placeholder-row {
@@ -3637,7 +3629,7 @@ placessidebar row {
     background-image: none;
     background-clip: content-box; }
   placessidebar row.sidebar-new-bookmark-row {
-    color: @theme_selected_bg_color_breeze; }
+    color: @main_color; }
 
 placesview .server-list-button > image {
   -gtk-icon-transform: rotate(0turn); }
@@ -3686,13 +3678,13 @@ spinbutton:not(.vertical) {
     border-style: none;
     box-shadow: none; }
     spinbutton:not(.vertical) button:hover {
-      color: @theme_view_hover_decoration_color_breeze; }
+      color: @main_color; }
       spinbutton:not(.vertical) button:hover:not(:checked):not(:active) {
         background: none; }
     spinbutton:not(.vertical) button:disabled {
       color: @insensitive_base_fg_color_breeze; }
     spinbutton:not(.vertical) button:active {
-      color: @theme_view_active_decoration_color_breeze;
+      color: @main_color;
       box-shadow: none; }
     spinbutton:not(.vertical) button:backdrop {
       color: @theme_unfocused_text_color_breeze;
@@ -3739,15 +3731,15 @@ spinbutton.vertical button {
   padding: 0;
   box-shadow: none;
   background-image: none;
-  background-color: @theme_base_color_breeze;
+  background-color: @bg_color;
   color: @theme_text_color_breeze;
   border-color: @borders_breeze; }
   spinbutton.vertical button:hover {
-    color: @theme_view_hover_decoration_color_breeze; }
+    color: @main_color; }
     spinbutton.vertical button:hover:not(:checked):not(:active) {
-      background-color: @theme_base_color_breeze; }
+      background-color: @bg_color; }
   spinbutton.vertical button:active {
-    color: @theme_view_active_decoration_color_breeze; }
+    color: @main_color; }
   spinbutton.vertical button:disabled {
     color: @insensitive_base_fg_color_breeze;
     background-color: @insensitive_base_color_breeze;
@@ -3789,11 +3781,11 @@ switch {
   switch:disabled {
     background-color: alpha(@theme_button_foreground_normal_breeze,0.03); }
   switch:checked {
-    background: alpha(@theme_button_decoration_hover_breeze,0.333);
-    border-color: @theme_button_decoration_hover_breeze; }
+    background: alpha(@main_color,0.333);
+    border-color: @main_color; }
     switch:checked:disabled, label:disabled selection:checked {
-      background: alpha(@theme_button_decoration_hover_breeze,0.222);
-      border-color: alpha(@theme_button_decoration_hover_breeze,0.777); }
+      background: alpha(@main_color,0.222);
+      border-color: alpha(@main_color,0.777); }
   switch:dir(ltr):checked slider {
     margin-left: 1px; }
   switch:dir(ltr):not(:checked) slider {
@@ -3808,9 +3800,9 @@ switch {
     border-color: @borders_breeze;
     background: linear-gradient(180deg, mix(@theme_button_background_normal_breeze,white,0.03125) 0%, @theme_button_background_normal_breeze 50%, mix(@theme_button_background_normal_breeze,black,0.03125) 100%); }
   switch:hover slider {
-    border-color: @theme_button_decoration_hover_breeze; }
+    border-color: @main_color; }
   switch:focus slider {
-    border-color: @theme_button_decoration_focus_breeze; }
+    border-color: @main_color; }
   switch:disabled slider {
     box-shadow: none;
     color: @theme_button_foreground_insensitive_breeze;
@@ -3916,15 +3908,15 @@ treeview.view {
   headerbar.selection-mode button.view.subtitle:visited {
     border-radius: 0; }
   treeview.view:hover {
-    background-color: alpha(@theme_selected_bg_color_breeze,0.3);
+    background-color: alpha(@main_color,0.3);
     border-left-color: @theme_fg_color_breeze;
     border-top-color: @theme_fg_color_breeze; }
   treeview.view:selected,
   headerbar.selection-mode .view.subtitle:link,
   headerbar.selection-mode button.view.subtitle:visited {
-    background-color: @theme_selected_bg_color_breeze;
-    border-left-color: @theme_selected_fg_color_breeze;
-    border-top-color: @theme_selected_fg_color_breeze; }
+    background-color: @main_color;
+    border-left-color: @bg_color;
+    border-top-color: @bg_color; }
   treeview.view:backdrop:selected {
     background-color: @theme_unfocused_selected_bg_color_breeze;
     border-left-color: @theme_unfocused_selected_fg_color_breeze;
@@ -3947,7 +3939,7 @@ treeview.view {
   treeview.view:drop(active) {
     border-style: solid none;
     border-width: 1px;
-    border-color: @theme_button_decoration_hover_breeze; }
+    border-color: @main_color; }
   treeview.view.expander {
     min-width: 16px;
     min-height: 16px;
@@ -3956,17 +3948,17 @@ treeview.view {
     treeview.view.expander:dir(rtl) {
       -gtk-icon-source: -gtk-icontheme("go-next-rtl-symbolic"); }
     treeview.view.expander:hover {
-      color: @theme_button_decoration_hover_breeze; }
+      color: @main_color; }
     treeview.view.expander:selected,
     headerbar.selection-mode .expander.subtitle:link,
     headerbar.selection-mode button.expander.subtitle:visited {
-      color: @theme_selected_fg_color_breeze; }
+      color: @bg_color; }
     treeview.view.expander:checked {
       -gtk-icon-source: -gtk-icontheme("go-down-symbolic"); }
       treeview.view.expander:checked:selected,
       headerbar.selection-mode .subtitle:checked:link,
       headerbar.selection-mode button.subtitle:checked:visited {
-        color: @theme_selected_fg_color_breeze; }
+        color: @bg_color; }
   treeview.view header button {
     color: @theme_button_foreground_normal_breeze;
     background-color: @theme_button_background_normal_breeze;
@@ -3974,11 +3966,11 @@ treeview.view {
     box-shadow: none; }
     treeview.view header button:hover {
       color: @theme_button_foreground_normal_breeze;
-      background-color: alpha(@theme_button_decoration_hover_breeze,0.5);
+      background-color: alpha(@main_color,0.5);
       box-shadow: none; }
     treeview.view header button:active {
       color: @theme_button_foreground_normal_breeze;
-      background-color: alpha(@theme_button_decoration_hover_breeze,0.5); }
+      background-color: alpha(@main_color,0.5); }
   treeview.view header button:last-child:backdrop, treeview.view header label:backdrop selection:last-child, label:backdrop treeview.view header selection:last-child, treeview.view header button:last-child {
     border-right-style: none; }
   treeview.view button.dnd:active, treeview.view button.dnd:selected,
@@ -3991,9 +3983,9 @@ treeview.view {
   treeview.view header.button.dnd:hover,
   treeview.view header.button.dnd {
     padding: 0 6px;
-    color: @theme_selected_fg_color_breeze;
+    color: @bg_color;
     background-image: none;
-    background-color: @theme_selected_bg_color_breeze;
+    background-color: @main_color;
     border-style: none;
     border-radius: 0;
     box-shadow: none;
@@ -4279,20 +4271,20 @@ hdyviewswitcher > button {
     background-color: transparent; }
     hdyviewswitcher > button:checked > stack, hdyviewswitcher > button:checked:backdrop > stack, label:backdrop hdyviewswitcher > selection:checked > stack {
       border-bottom: 3px solid transparent;
-      border-top: 3px solid @theme_button_decoration_focus_breeze; }
+      border-top: 3px solid @main_color; }
   hdyviewswitcher > button.needs-attention > stack > box label {
     animation: needs_attention 150ms ease-in;
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(@theme_button_decoration_focus_breeze), to(transparent));
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(@main_color), to(transparent));
     background-size: 6px 6px, 6px 6px;
     background-repeat: no-repeat;
     background-position: right 0px, right 1px; }
 
 headerbar hdyviewswitcher > button:checked > stack {
   border-top: 3px solid transparent;
-  border-bottom: 3px solid @theme_button_decoration_focus_breeze; }
+  border-bottom: 3px solid @main_color; }
   headerbar hdyviewswitcher > button:checked > stack:backdrop {
     border-top: 3px solid transparent;
-    border-bottom: 3px solid @theme_button_decoration_focus_breeze; }
+    border-bottom: 3px solid @main_color; }
 
 viewswitcher {
   border-radius: 0;
@@ -4337,10 +4329,10 @@ viewswitcher {
       viewswitcher button:checked > stack, viewswitcher button:checked:backdrop > stack, viewswitcher label:backdrop selection:checked > stack, label:backdrop viewswitcher selection:checked > stack,
       viewswitcher button label:backdrop viewswitcher > selection:checked > stack {
         border-bottom: 3px solid transparent;
-        border-top: 3px solid @theme_button_decoration_focus_breeze; }
+        border-top: 3px solid @main_color; }
     viewswitcher button.needs-attention > stack > box label {
       animation: needs_attention 150ms ease-in;
-      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(@theme_button_decoration_focus_breeze), to(transparent));
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(@main_color), to(transparent));
       background-size: 6px 6px, 6px 6px;
       background-repeat: no-repeat;
       background-position: right 0px, right 1px; }
@@ -4350,13 +4342,13 @@ viewswitcher {
 
 headerbar viewswitcher button:checked > stack {
   border-top: 3px solid transparent;
-  border-bottom: 3px solid @theme_button_decoration_focus_breeze; }
+  border-bottom: 3px solid @main_color; }
   headerbar viewswitcher button:checked > stack > box label {
     font-weight: bold; }
 
 headerbar viewswitcher button:checked > stack:backdrop {
   border-top: 3px solid transparent;
-  border-bottom: 3px solid @theme_button_decoration_focus_breeze; }
+  border-bottom: 3px solid @main_color; }
 
 viewswitcherbar actionbar > revealer > box {
   margin: 0;
@@ -4368,7 +4360,7 @@ window.unified {
     border-radius: 0; }
 
 assistant .sidebar {
-  background-color: @theme_base_color_breeze;
+  background-color: @bg_color;
   color: @theme_text_color_breeze;
   border-top: 1px solid @borders_breeze;
   border-right: 1px solid @borders_breeze; }
@@ -4384,7 +4376,7 @@ assistant .sidebar label {
   padding: 6px 12px; }
 
 assistant .sidebar label.highlight {
-  background-color: @theme_selected_bg_color_breeze;
+  background-color: @main_color;
   color: @theme_fg_color_breeze; }
 
 .floating-bar {
@@ -4395,7 +4387,7 @@ assistant .sidebar label.highlight {
   margin: 3px; }
 
 window.background.chromium {
-  background-color: @theme_base_color_breeze;
+  background-color: @bg_color;
   border-color: @borders_breeze; }
   window.background.chromium menubar,
   window.background.chromium .menubar {
@@ -4408,7 +4400,7 @@ window.background.chromium {
       background-color: @theme_unfocused_bg_color_breeze;
       color: @theme_unfocused_fg_color_breeze; }
   window.background.chromium entry {
-    background-color: @theme_base_color_breeze; }
+    background-color: @bg_color; }
   window.background.chromium.csd menubar,
   window.background.chromium.csd .menubar {
     color: @theme_titlebar_foreground_breeze;
@@ -4487,6 +4479,6 @@ window.background.chromium {
     background: none;
     background-color: alpha(@theme_fg_color_breeze,0.5); }
     #MozillaGtkWidget scrollbar slider:hover {
-      background-color: alpha(@theme_button_decoration_hover_breeze,0.5); }
+      background-color: alpha(@main_color,0.5); }
     #MozillaGtkWidget scrollbar slider:focus {
-      background-color: alpha(@theme_button_decoration_focus_breeze,0.5); }
+      background-color: alpha(@main_color,0.5); }
